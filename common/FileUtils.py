@@ -25,11 +25,12 @@ import os
     在本机创建文件夹：os.makedirs(路径)
 """
 
-def createFolder(dir:str):
+def createFolder(dir: str = ""):
     if os.path.exists(dir):
         return True
     os.makedirs(dir)
     return False
 
-a = createFolder("test1")
-print(a)
+if __name__ == "__main__":
+    a = createFolder("test1")
+    print(a)
